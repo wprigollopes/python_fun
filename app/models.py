@@ -13,6 +13,7 @@ class State(Base):
     name = Column(String(100), nullable=False)
     abbreviation = Column(String(2), nullable=False, unique=True)
     region = Column(String(20), nullable=False)
+    size = Column(Integer)
 
     def __repr__(self):
         return f"<State(name='{self.name}', abbreviation='{self.abbreviation}')>"
